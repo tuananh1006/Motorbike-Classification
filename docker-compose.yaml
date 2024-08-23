@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  product-search:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    image: tuananhhocdata/motorbike-classification:lts
+    container_name: motorbike-classification
+    user: root
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
