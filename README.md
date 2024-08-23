@@ -14,7 +14,7 @@ Motorbike Image to classify:
 
 ##
 Returned Result  :
-![image](https:///github.com/tuananh1006/motorbike-classification/blob/main/readme_images/fastapi.png)
+![image](https://github.com/tuananh1006/Motorbike-Classification/blob/main/readme_images/fastapi.png)
 
 
 ## How-to Guide
