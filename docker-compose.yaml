@@ -1,15 +1,15 @@
-version: "3.8"
+version: '3.9'
 
 services:
-  product-search:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    platform: linux/amd64
-    image: tuananhhocdata/motorbike-classification:lts
-    container_name: motorbike-classification
-    user: root
+  classify_disaster_text:
+    image: tuananhhocdata/mbic:0.0.1
     ports:
-      - "8001:8001"
-    env_file:
-      - .env
+      - "30000:30000"
+    build:
+      dockerfile: /Dockerfile
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:30000/docs"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 10s

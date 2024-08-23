@@ -13,7 +13,7 @@ COPY ./requirements.txt /app
 
 RUN pip install -r requirements.txt --no-cache-dir # Run command install on this line to avoid re-install requirements.txt when model & data has changed
 
-COPY ./model/model.pth /app/model/
+COPY ./app/model/model.pt /app/model/
 
 # Take note port expose
 EXPOSE 30000
