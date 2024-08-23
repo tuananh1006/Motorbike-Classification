@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  classify_disaster_text:
+    image: tuananhhocdata/mbic:0.0.1
+    ports:
+      - "30000:30000"
+    build:
+      dockerfile: /Dockerfile
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:30000/docs"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
