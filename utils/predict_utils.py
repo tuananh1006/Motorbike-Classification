@@ -4,7 +4,9 @@ import torchvision.transforms as transforms
 import torch
 from torch import nn
 import torchvision.models as models
-import numpy as np
+import os
+
+os.environ["CUDA_LAUNCH_BLOCKING"] = "0"
 
 def define_device():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -23,7 +25,7 @@ def load_model(model_path, device):
         nn.Linear(512, 5)  # Assuming you have 5 classes
     )
     model_ft.load_state_dict(torch.load('./model/model.pt',map_location=device))
-    model_ft.eval()
+
     return model_ft
 
 def transform_img():
@@ -36,20 +38,18 @@ def transform_img():
     return transform
 
 def predict(model, device, img_path, transform):
-    img = Image.open(img_path).convert('RGB')  # Ensure the image is in RGB format
-    transform_using = transform_img()
-    if isinstance(img, np.ndarray):
-        img = Image.fromarray(img)
+    img = None
+    img = Image.open(img_path).convert('RGB')
+    transform_using = transform()
     img = transform_using(img).unsqueeze(0)
-    img = img.to(device)  # Move the image tensor to the same device as the model
     with torch.no_grad():
         outputs = model(img)
         _, preds = torch.max(outputs, 1)
     return preds.item()
 
 if __name__ == "__main__":
-    # device = define_device()
-    device=torch.device("cpu")
+    device = define_device()
+    # device=torch.device("cpu")
     model = load_model("./model/model.pt", device)
-    img_path = "./data/3.png"
+    img_path = "./data/test.jpg"
     print(f"Result: {predict(model, device, img_path, transform_img)}")
