@@ -4,7 +4,7 @@ https://computingforgeeks.com/how-to-install-terraform-on-ubuntu/
 ## How-to Guide
 Authenticate with Azure
 ```shell
-azure login
+az login
 ```
 
 ## Provision a new cluster
