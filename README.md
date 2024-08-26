@@ -48,7 +48,7 @@ docker compose -f docker-compose.yaml up -d
 ---
 
 ### 2. Model-serving with Azure Kubernetes Services (AKS)
-#### Install GCloud Packages
+#### Install Azure CLI Packages
 + [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 ```bash
 sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash 
