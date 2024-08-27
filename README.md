@@ -14,7 +14,7 @@ Motorbike Image to classify:
 
 ##
 Returned Result  :
-![image](https:///github.com/tuananh1006/motorbike-classification/blob/main/readme_images/fastapi.png)
+![image](https://github.com/tuananh1006/Motorbike-Classification/blob/main/readme_images/fastapi.png)
 
 
 ## How-to Guide
@@ -39,28 +39,4 @@ cd ./app/
 #### 1.4 Connect service app with Uvicorn
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 30000
-```
-#### 1.5 Another way to deploy model locally with Docker Compose
-*** If you already have Docker Engine in your local machine, just execute 1 command:
-```bash
-docker compose -f docker-compose.yaml up -d
-```
----
 
-### 2. Model-serving with Azure Kubernetes Services (AKS)
-#### Install Azure CLI Packages
-+ [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-```bash
-sudo curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash 
-```
-+ Setup your Azure project:
-- Initialize Azure account:
-```bash
-  az login
-```
-#### 2.1 Create AKS cluster with Terraform (infrastruture as code)
-```bash
-cd terraform # Navigate to terraform folder
-terraform plan # Preview cluster plan
-terraform apply # Create cluster
-```
