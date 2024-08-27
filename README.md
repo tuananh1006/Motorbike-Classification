@@ -106,8 +106,12 @@ your_nginx-ingress_host cbp.com # Updated content
 
 #### 2.8 Access application at above address http://cbp.com/docs
 
-Because i'm using free Student Subscription,don't enough memory to pull image size.Instead of running on cloud, i run this on minikube
+Because I'm using a free Student Subscription, I don't have enough memory to pull the image size. Instead of running it on the cloud, I am running it on minikube.
+
+Fail because not enough memory :
 ![image](https://github.com/tuananh1006/Motorbike-Classification/blob/main/readme_images/fail.png)
+
+Result when use minikube  :
 ![image](https://github.com/tuananh1006/Motorbike-Classification/blob/main/readme_images/minikube.png)
 
 
