@@ -1,0 +1,11 @@
+image:
+  repository: tuananhhocdata/mbci
+  tag: "0.0.2"
+  pullPolicy: Always
+
+
+env:
+  - name: JAEGER_HOST
+    value: jaeger-tracing.jaeger-tracing.svc.cluster.local
+  - name: JAEGER_PORT
+    value: 16686
