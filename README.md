@@ -39,6 +39,7 @@ cd ./app/
 #### 1.4 Connect service app with Uvicorn
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 30000
+```
 
 #### 1.5 Another way to deploy model locally with Docker Compose
 *** If you already have Docker Engine in your local machine, just execute 1 command:
