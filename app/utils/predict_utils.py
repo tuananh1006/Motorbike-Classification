@@ -5,6 +5,7 @@ import torch
 from torch import nn
 import torchvision.models as models
 import os
+import gdown
 
 os.environ["CUDA_LAUNCH_BLOCKING"] = "0"
 
@@ -12,7 +13,24 @@ def define_device():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     return device
 
+#down file from link drive
+def download_model():
+    #make path model if not exists
+    if not os.path.exists('./model'):
+        os.makedirs('./model')
+    if not os.path.exists('./model/model.pt'):
+        url = "https://drive.google.com/uc?id=1DY1tSYKOcFmpAKnjBIDyv3VF7OUebQ7W&export=download"
+        output = "./model/model.pt"
+        gdown.download(url, output, quiet=False)
+        return True
+    else:
+        return False
 def load_model( device):
+    check = download_model()
+    if check==True:
+        print("Download model success")
+    else:
+        print("Model already exists")
     model_ft = models.regnet_y_128gf(weights='RegNet_Y_128GF_Weights.IMAGENET1K_SWAG_LINEAR_V1')
     num_ftrs = model_ft.fc.in_features
     model_ft.fc = nn.Sequential(
@@ -26,7 +44,7 @@ def load_model( device):
     )
     #List current directory
     model_ft.load_state_dict(torch.load('./model/model.pt',map_location=device))
-
+    print("Load model success")
     return model_ft
 
 def transform_img():
@@ -50,6 +68,6 @@ if __name__ == "__main__":
     device = define_device()
     # device=torch.device("cpu")
     model = load_model( device)
-    img_path = "./app/data/test.jpg"
+    img_path = "./data/test.jpg"
     img=Image.open(img_path).convert('RGB')
     print(f"Result: {predict(model, device, img)}")
