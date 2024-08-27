@@ -1,0 +1,33 @@
+#https://learn.microsoft.com/en-us/azure/aks/app-routing?tabs=default%2Cdeploy-app-default
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}
+  namespace: model-serving
+spec:
+  ingressClassName: webapprouting.kubernetes.azure.com
+  rules:
+  - host: cbp.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ .Release.Name }}
+            port:
+              number: 30000
+        path: /docs
+        pathType: Prefix
+      - backend:
+          service:
+            name: {{ .Release.Name }}
+            port:
+              number: 30000
+        path:  /openapi.json
+        pathType: Prefix
+      - backend:
+          service:
+            name: {{ .Release.Name }}
+            port:
+              number: 30000
+        path: /MotorbikeClassification
+        pathType: Prefix

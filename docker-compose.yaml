@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   classify_disaster_text:
-    image: tuananhhocdata/mbic:0.0.1
+    image: tuananhhocdata/mbci:0.0.1
     ports:
       - "30000:30000"
     build:

@@ -39,3 +39,4 @@ cd ./app/
 #### 1.4 Connect service app with Uvicorn
 ```bash
 uvicorn main:app --host 0.0.0.0 --port 30000
+
