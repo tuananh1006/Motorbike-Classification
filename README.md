@@ -4,9 +4,36 @@
 
 <img src="./assets/images/flowchart.png" alt="flowchart" width="700"/>
 
+# Repo structure
+```
+├── app: 
+│   ├── data
+│   ├── utils
+│   └── main.py
+├── helm-charts:
+│   ├── jaeger-tracing
+│   ├── model-serving
+│   ├── monitoring
+│   └── nginx-ingress
+├── notebook: 
+│   ├── resnet-50.ipynb
+│   └── visualize.ipynb
+├── terraform
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── README.md
+│   ├── ssh.tf
+│   └── variables.tf
+├── docker-compose.yaml
+├── dockerfile
+└── requirements.txt
+```
+
 ## **Table of Contents**
-
-
++ [API Example](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#api-example)
++ [I. How-to Guide](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#how-to-guide)
++ [II. Model-serving with Azure Kubernetes Services (AKS)](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#2-model-serving-with-google-kubernetes-engine-gke)
 ## **API Example**
 Motorbike Image to classify:
 ##
@@ -17,7 +44,7 @@ Returned Result  :
 ![image](https://github.com/tuananh1006/Motorbike-Classification/blob/main/readme_images/fastapi.png)
 
 
-## How-to Guide
+## I. How-to Guide
 
 ### 1. Running model locally
 #### 1.1 Creating & activating conda environment with python 3.9
