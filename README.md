@@ -4,7 +4,7 @@
 
 <img src="./assets/images/flowchart.png" alt="flowchart" width="700"/>
 
-# Repo structure
+### Repo structure
 ```
 ├── app: 
 │   ├── data
@@ -30,21 +30,17 @@
 └── requirements.txt
 ```
 
-## **Table of Contents**
-+ [API Example](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#api-example)
-+ [I. How-to Guide](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#how-to-guide)
-+ [II. Model-serving with Azure Kubernetes Services (AKS)](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#2-model-serving-with-google-kubernetes-engine-gke)
 ## **API Example**
 Motorbike Image to classify:
-##
+
 <img src="https://github.com/tuananh1006/motorbike-classification/blob/main/readme_images/12.png" width="440" height="337">
 
-##
+
 Returned Result  :
 ![image](https://github.com/tuananh1006/Motorbike-Classification/blob/main/readme_images/fastapi.png)
 
 
-## I. How-to Guide
+## I.How-to-Guide
 
 ### 1. Running model locally
 #### 1.1 Creating & activating conda environment with python 3.9
