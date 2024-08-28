@@ -2,7 +2,7 @@
 
 ### Architecture
 
-<img src="./assets/images/flowchart.png" alt="flowchart" width="700"/>
+<img src="./readme_images/flowchart.png" alt="flowchart" width="700"/>
 
 ### Repo structure
 ```
