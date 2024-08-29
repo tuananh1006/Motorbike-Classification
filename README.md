@@ -5,8 +5,8 @@
 2. [Repo Structure](#repo-structure)
 3. [API Example](#api-example)
 4. [I. How-to Guide](#i-how-to-guide)
-- [1. Running model locally](#1-running-model-locally)
-- [2. Model-serving with Azure Kubernetes Services (AKS)](#2-model-serving-with-azure-kubernetes-services-aks)
+  [1. Running model locally](#1-running-model-locally)
+  [2. Model-serving with Azure Kubernetes Services (AKS)](#2-model-serving-with-azure-kubernetes-services-aks)
 ### Architecture
 
 <img src="./readme_images/flowchart.png" alt="flowchart" width="700"/>
