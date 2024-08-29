@@ -6,20 +6,7 @@
 3. [API Example](#api-example)
 4. [I. How-to Guide](#i-how-to-guide)
   - [1. Running model locally](#1-running-model-locally)
-     - [1.1 Creating & activating conda environment with python 3.9](#11-creating--activating-conda-environment-with-python-39)
-     - [1.2 Install prerequisites](#12-install-prerequisites)
-     - [1.3 Navigate to app directory](#13-navigate-to-app-directory)
-     - [1.4 Connect service app with Uvicorn](#14-connect-service-app-with-uvicorn)
-     - [1.5 Another way to deploy model locally with Docker Compose](#15-another-way-to-deploy-model-locally-with-docker-compose)
    - [2. Model-serving with Azure Kubernetes Services (AKS)](#2-model-serving-with-azure-kubernetes-services-aks)
-     - [2.1 Install Azure CLI Packages](#21-install-azure-cli-packages)
-     - [2.2 Create AKS cluster with Terraform (infrastructure as code)](#22-create-aks-cluster-with-terraform-infrastructure-as-code)
-     - [2.3 Switch to your AKS cluster environment](#23-switch-to-your-aks-cluster-environment)
-     - [2.4 Create cluster namespace](#24-create-cluster-namespace)
-     - [2.5 Deploy Nginx Ingress Controller with Helm-chart](#25-deploy-nginx-ingress-controller-with-helm-chart)
-     - [2.6 Deploy Cat Breed Classification Application](#26-deploy-cat-breed-classification-application)
-     - [2.7 Config Domain Name to nginx-ingress's External IP](#27-config-domain-name-to-nginx-ingresss-external-ip)
-     - [2.8 Access application at above address](#28-access-application-at-above-address)
 ### Architecture
 
 <img src="./readme_images/flowchart.png" alt="flowchart" width="700"/>
