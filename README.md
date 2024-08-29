@@ -31,9 +31,10 @@
 ```
 
 ## **Table of Contents**
-+ [API Example](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#api-example)
-+ [I. How-to Guide](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#how-to-guide)
-+ [II. Model-serving with Azure Kubernetes Services (AKS)](https://github.com/tuananh1006/Motorbike-Classification?tab=readme-ov-file#2-model-serving-with-google-kubernetes-engine-gke)
+1. [Architecture](#architecture)
+2. [Repo Structure](#repo-structure)
+3. [API Example](#api-example)
+4. [I. How-to Guide](#i-how-to-guide)
 ## **API Example**
 Motorbike Image to classify:
 ##
